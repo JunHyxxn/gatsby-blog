@@ -1,6 +1,18 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: `https://www.yourdomain.tld`,
+    title: "JunHyxxn GatsBy Blog",
+    description: "Inha Univ. Department of Statistics & CS",
   },
-  plugins: [],
-}
+  plugins: [
+    "gatsby-plugin-image",
+    "gatsby-plugin-sharp",
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: `blog`,
+        path: `${__dirname}/blog`,
+      },
+    },
+    "gatsby-plugin-mdx",
+  ],
+};
